@@ -11,12 +11,23 @@
 
 .input-wrapper {
   margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .label {
   font-size: 2em;
   display: block;
-  padding: 1em;
+  padding: 1em 1em 0 1em;
+  color: cornflowerblue;
+  transition: 0.3s ease-in;
+}
+
+.label-header {
+  height: 0.5em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-wrapper {
@@ -27,9 +38,24 @@
   appearance: none;
   transition: 0.3s ease-in-out;
 }
+
+.label:has(>.radio:checked) {
+ color: black
+}
+
+.x {
+  line-height: 1em;
+}
+
+.label:has(>.radio:checked) .x {
+  transform: rotate(45deg);
+ }
+
 .radio:checked + .image-wrap {
   height: 15em;
 }
+
+
 .image-wrap {
   height: 0;
   overflow: hidden;
@@ -37,12 +63,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 1em; */
+  margin-bottom: 1em;
 }
 
 .image {
-  display: block;
-  width: 60%;
+  width: 15em;
   margin: 0 auto;
   padding: 1em;
   border: 0.05em solid black
@@ -52,7 +77,14 @@
   cursor: pointer;
 }
 
+.main-inner:hover .label{
+  color: black;
+}
+
+.label:active .label-header{
+  color: cornflowerblue;
+}
+
 .label:hover .image-wrap {
   height: 15em;
-
 }
