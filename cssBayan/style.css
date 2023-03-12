@@ -142,6 +142,10 @@ a {
   .label:hover .image-wrap {
     height: 32rem;
   }
+
+  .label:hover .x {
+    transform: rotate(45deg);
+  }
 }
 @media (min-width:320px) {
   html {
