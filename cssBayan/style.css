@@ -143,6 +143,11 @@ a {
     height: 32rem;
   }
 }
+@media (min-width:320px) {
+  html {
+    font-size: 62.5%;
+  }
+}
 
 @media (min-width:820px) {
   html {
